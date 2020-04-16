@@ -5,7 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class BookingScreen implements AppLocators.BookingScreen {
+
+    //Page object for booking appointment section
+    @FindBy(xpath = bookAppointmentTitle)
+    public WebElement BOOKING_APPOINTMENT_SECTION;
 
     //Page object for name label
     @FindBy(xpath = nameLabel)
@@ -45,7 +51,7 @@ public class BookingScreen implements AppLocators.BookingScreen {
     //Page object for cars interested field
     @FindBy(xpath = carsInterestedField)
     @CacheLookup
-    public WebElement CARS_INTRESTED_FIELD;
+    public WebElement CARS_INTERESTED_FIELD;
 
     //Page object for appointment date label
     @FindBy(xpath = desiredAppointmentDate)
@@ -56,6 +62,14 @@ public class BookingScreen implements AppLocators.BookingScreen {
     @FindBy(name = appointmentDateField)
     @CacheLookup
     public WebElement APPOINTMENT_DATE_FIELD;
+
+    @FindBy(tagName = calendarDates)
+    public List<WebElement> CALENDAR_DATES;
+
+    //Page object for calendar ok button
+    @FindBy(xpath = calendarOkBtn)
+    @CacheLookup
+    public WebElement CALENDAR_OK_BTN;
 
     //Page object for let's Drive button
     @FindBy(xpath = letsDriveBtn)
