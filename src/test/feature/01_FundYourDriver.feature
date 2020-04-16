@@ -20,5 +20,5 @@ Feature: This feature will be used to book and appointment
     Then I should be successfully book and appointment
 
     Examples:
-      | fullname   | phone number | email id           | cars interested |
-      | Sumit Bera | 0142608796   | sumit.bera@live.in | Axia            |
+      | fullname  | phone number | email id           | cars interested |
+      | Test User | 0589439896   | sumit.bera@live.in | Axia            |
