@@ -16,7 +16,7 @@ To execute this project there are two ways:-
 1) One is to setup selenium grid on your machine.
 2) If machine is running with a docker, simply run docker-compose.yml
 
-A) *Running Project with a selenium grid*
+**A) *Running Project with a selenium grid***
 
 Setup:
 1) Download the selenium grid folder from this link [https://drive.google.com/drive/folders/1vz-cL0_8h-ch6Qni3k50MTKN2RcMEPCl?usp=sharing]()
@@ -37,7 +37,7 @@ Setup:
 Note: While running tests in local machine, you can see the execution on chrome browser
 
 
-B) *Running Project using Docker Compose*
+**B) *Running Project using Docker Compose***
 1) Assuming that Docker is already running on a machine.
 2) Go to the main folder of Project Directory.
 3) Run the following command `docker-compose up -d --scale chrome=1`, Please note since there is only one scenario, therefore chrome value is set to 1. It's configurable based on scenarios we want to run in parallel.
@@ -46,7 +46,7 @@ B) *Running Project using Docker Compose*
 
 Note: While running tests in docker execution will be headless.
 
-C) *Report Generation*
+**C) *Report Generation***
 1) Once the test execution is over, `allure-results` folder will be generated. You can see the allure reports as well. But to visualize that you need have allure installed on your machine.
 
 Installation : `brew install allure`
