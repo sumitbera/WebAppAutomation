@@ -63,4 +63,4 @@ Installation : `brew install allure`
 
 Execution:
 
-![Alt-text](report-images/ExecutionVideo.gif)
+![ExecutionVideo](https://user-images.githubusercontent.com/12911549/79449931-aee37700-8016-11ea-91ff-3ff198e3bfe5.gif)
