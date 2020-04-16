@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
         plugin = {"pretty", "json:target/json/output.json", "html:target/html/"},
         tags = {"@Trevo"},
         features = {"src/test/feature/"},
-        glue = {""},
+        glue = {"com.webapp.trevo.stepdefinition"},
         monochrome = true
 )
 public class RunnerTest {
