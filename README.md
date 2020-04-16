@@ -60,3 +60,7 @@ Installation : `brew install allure`
 ![Alt text](report-images/IMG_2.png "Allure Report 2")
 
 ![Alt text](report-images/IMG_3.png "Allure Report 3")
+
+Execution:
+
+![Alt-text](report-images/ExecutionVideo.gif)
