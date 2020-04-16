@@ -55,3 +55,8 @@ Installation : `brew install allure`
 3) The above command should generate report on localhost [http://192.168.0.170:49280/index.html]()
 
 **Please note: I've filled the booking form but didn't performed a submission to avoid submitting test data in production website.**
+![Alt text](report-images/IMG_1.png "Allure Report 1")
+
+![Alt text](report-images/IMG_2.png "Allure Report 2")
+
+![Alt text](report-images/IMG_3.png "Allure Report 3")
