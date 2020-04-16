@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name ="Suite" data-provider-thread-count="5" parallel="tests" configfailurepolicy="continue" >
+    <listeners>
+        <listener class-name="com.webapp.trevo.utility.DriverManager"/>
+    </listeners>
+    <test name="feature" parallel="classes" thread-count="5">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.webapp.trevo.runner.RunnerTest">
+            </class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->
