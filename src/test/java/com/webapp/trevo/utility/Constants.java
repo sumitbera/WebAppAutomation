@@ -3,7 +3,7 @@ package com.webapp.trevo.utility;
 public interface Constants {
 
     interface WEB_CONFIG {
-        String WEB_URL = "https://trevo.my/events/fundyourdrive";
+        String WEB_URL = "";
         String NODE_URL = "http://localhost:4444/wd/hub";
         String WINDOW_START_STATE = "--start-maximized";
         String WEB_PAGE_STATE = "return document.readyState";
