@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - docker-compose up -d
+  build:
+    commands:
+      - mvn test
+reports:
+  Selenium:
+    file-format: CucumberJson
+    files:
+      - target/json/output.json
