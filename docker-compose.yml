@@ -1,19 +1,23 @@
 version: '3'
 services:
   selenium-hub:
-    image: selenium/hub
+    image: selenium/hub:latest
     container_name: selenium-hub
     ports:
     - '4444:4444'
+    - '4443:4443'
+    - '4442:4442'
   chrome:
-    image: selenium/node-chrome
+    image: selenium/node-chrome:latest
+    shm_size: 2gb
     volumes:
     - '/dev/shm:/dev/shm'
     depends_on:
     - selenium-hub
     environment:
-    - HUB_HOST=selenium-hub
-    - HUB_PORT=4444
+    - SE_EVENT_BUS_HOST=selenium-hub
+    - SE_EVENT_BUS_PUBLISH_PORT=4442
+    - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     healthcheck:
       test: curl --fail -s http://localhost:4444/ || exit 1
       interval: 1m30s
@@ -21,14 +25,16 @@ services:
       retries: 3
 
   firefox:
-    image: selenium/node-firefox
+    image: selenium/node-firefox:latest
+    shm_size: 2gb
     volumes:
     - '/dev/shm:/dev/shm'
     depends_on:
     - selenium-hub
     environment:
-    - HUB_HOST=selenium-hub
-    - HUB_PORT=4444
+    - SE_EVENT_BUS_HOST=selenium-hub
+    - SE_EVENT_BUS_PUBLISH_PORT=4442
+    - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
     healthcheck:
       test: curl --fail -s http://localhost:4444/ || exit 1
       interval: 1m30s
